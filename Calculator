@@ -1,0 +1,43 @@
+#include <stdio.h>
+int main ()
+{
+    int add1,add2,sum,choice;
+    float sub1,sub2,subt;
+    double mult1,mult2,prod,div1,div2,quo;
+    do
+    {
+    printf("Press 1 for addition\nPress 2 for subtraction\nPress 3 for multiplication\nPress 4 for division\n");
+    scanf("%d",&choice);
+    if (choice!=1 && choice!=2 && choice!=3 && choice!=4)
+        printf("Please enter a valid number\n\n");
+    } while(choice!=1 && choice!=2 && choice!=3 && choice!=4);
+    if (choice==1)
+    {
+        printf("Enter the two numbers:\n");
+        scanf("%d %d",&add1,&add2);
+        sum = add1 + add2;
+        printf("Sum of %d and %d is %d",add1,add2,sum);
+    }
+    else if (choice==2)
+    {
+        printf("Enter the two numbers:\n");
+        scanf("%f %f",&sub1,&sub2);
+        subt = sub1 - sub2;
+        printf("Difference between %.2f and %.2f is %.2f",sub1,sub2,subt);
+    }
+    else if (choice==3)
+    {
+        printf("Enter the two numbers:\n");
+        scanf("%lf %lf",&mult1,&mult2);
+        prod = mult1 * mult2;
+        printf("Product of %.4lf and %.4lf is %.4lf",mult1,mult2,prod);
+    }
+    else if (choice==4)
+    {
+        printf("Enter the two numbers:\n");
+        scanf("%lf %lf",&div1,&div2);
+        quo = div1 / div2;
+        printf("Quotient of %.4lf and %.4lf is %.4lf",div1,div2,quo);
+    }
+    return 0;
+}
